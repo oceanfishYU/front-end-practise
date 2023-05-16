@@ -1,0 +1,1 @@
+document.write("<h2>使用引入的方法寫javascript</h2>")
