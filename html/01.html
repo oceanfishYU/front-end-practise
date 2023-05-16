@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--  meta標籤  -->
+        <meta charset="UTF-8"></meta> <!--網頁的編碼，用UTF-8才能顯示中文-->
+        <meta name="description" content="余瓊紋的網站，練習html用" />  <!-- name="description"是網站的描述，像goole搜尋後網站標題下面的文字就是content內容 -->
+        <meta name="author" content="余瓊紋"/>  <!-- 告訴搜尋引擎這個網站的做是誰 -->
+        <meta name="keyword" content="余瓊紋,html,練習"/>  <!-- 告訴搜尋引擎這個網站的關鍵字 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  <!-- viewport是視口的意思，width=device-width是網頁會根據瀏覽裝置的寬度做調整，initial-scale=1.0是網頁的初始縮放比為100% -->
+        <title>余瓊紋的網頁</title>   <!--網頁分頁的標題-->
+    </head>
+    <body>
+        <!--基本標籤-->
+        <h1>第一篇文章</h1>        <!--最大的標題，通常只會有一個-->
+        <p>今天天氣<b>好</b></p>  <!--p代表是一般文字內容--> <!--b代表是粗體-->
+        <br></br>                 <!--br代表換行-->
+        <h6>第二篇文章</h6>        <!--最小的標題-->
+        <p>今天<b>天氣<i>壞</i></b></p>  <!--i代表斜體-->
+        <br/>                     <!--br因為中間不會放其他內容所以可以直接寫成br/-->
+        <hr/>                     <!--hr是水平線，中間不會有內容所以也可以直接寫hr/-->
+        <h1>第三篇文章</h1>
+        <p>今天<b>天氣<i>普通</i></b></p>  <!--i代表斜體-->
+        <br/>
+
+        <!--連結、圖片-->
+
+        <!--  寫在開始標籤後面代表這個標籤的屬性(像meta的屬性是UTF-8) -->
+        <a href="https://google.com">google網頁</a>  <!--  a標籤用來定義超連結，href後面加網址或檔案名 -->
+        <br/>
+        <a href="02.html">第二頁</a>  <!--  有可能是要連結到本身網站的別的網頁，這時只要輸入檔案名稱就好了(google是外部網站) -->
+        <br/>
+        <a href="dir/03.html">第三頁</a>  <!--  dir/是指進入名叫dir的資料夾 -->
+        <br/>
+        <a href="人工智慧概論.png">人工智慧概論筆記</a> <!--  a標籤也可以連接到檔案(圖片、pdf...) -->
+        <br/>
+        <a href="dir/111-1課表.png">111-1課表</a>
+        <br/>
+        <a href="計算機網路概論心得.pdf">計算機網路概論心得</a>
+        <br/>
+
+        <img src="初業合格.jpg"/> <!--  img標籤可以直接在網頁插入圖片，因為中間不會有內容所以可以直接寫成img src=""/ -->
+        <br/>
+        <!--  可以搜尋圖片後右鍵在新分頁開啟圖片並複製網址貼上 -->
+        <img src="https://media.istockphoto.com/id/184276818/zh/%E7%85%A7%E7%89%87/red-apple.jpg?s=612x612&w=0&k=20&c=jqr-Dw4LvXapRufzvb4ZcCfNeR_TlDlBk52-_PwlOR0="/>
+        <br/>
+        <hr/>
+        <img src="初業合格.jpg" width="400" height="400"/> <!--  可以利用width和height改變圖片長寬，但沒按比例會變形 -->
+        <br/> 
+        <hr/>
+        <img src="初業合格.jpg" width="400"/> <!--  只改變width或height的話另外一個會自動按比例改變 -->
+        <br/>
+
+        <!--  影片&嵌入youtube影片 -->
+        <video src="學分問題.mp4" controls width="450">無法載入影片</video>  <!--  使用video標籤插入影片，controls是讓我們能控制影片，沒有controls的話影片無法撥放，中間包的字是影片無法載入時才會顯示 -->
+        <br/>
+        <!--  在youtube影片分享中選擇嵌入並複製就好 -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bLMl94yup60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+        <!--  列表&表格 -->
+        <ul> <!--  ul就是列表，列點表示  -->
+            <li>google</li> <!--  li就是列表裡的內容  -->
+            <li>ig</li>
+            <li>Youtube</li>
+            <li>Facebook</li>
+        </ul>
+        <br/>
+        <hr/>
+        <ol> <!--  ol就是列表，有排序表示(預設數字)  -->
+            <li>google</li> <!--  li就是列表裡的內容  -->
+            <li>ig</li>
+            <li>Youtube</li>
+            <li>Facebook</li>
+        </ol>
+        <br/>
+        <hr/>
+        <ol type="A" style="color:red;"> <!--  ol就是列表，用字母排序表示。 style="color:red;"是css程式碼  -->
+            <li>google</li> <!--  li就是列表裡的內容  -->
+            <li>ig</li>
+            <li>Youtube</li>
+            <li>Facebook</li>
+        </ol>
+
+        <table style="color:red;"> <!--  table標籤就是表格  -->
+            <tr> <!--  tr標籤表示行  -->
+                <td>日期</td>  <!--  行裡面的內容就寫在td標籤裡面  -->
+                <td>英文</td>
+                <td>國文</td>
+            </tr>
+            <tr>
+                <td>5/14</td>
+                <td>13:00</td>
+                <td>15:00</td>
+            </tr>
+
+        </table>
+        
+        <table width="200" height="80"> <!--  如果覺得表格太擠也可以設定長寬  -->
+            <tr> <!--  tr標籤表示行  -->
+                <td>日期</td>  <!--  行裡面的內容就寫在td標籤裡面  -->
+                <td>英文</td>
+                <td>國文</td>
+            </tr>
+            <tr>
+                <td>5/14</td>
+                <td>13:00</td>
+                <td>15:00</td>
+            </tr>
+
+        </table>
+        <br/>
+        <hr/>
+
+        <!--  html的容器(裡面可以存放多個標籤) div & span  如果我們要對網頁使用css技術如果使用容器會方便很多  -->
+        <div style="color:red;">  <!--  使用容器的話要使用Css改變多個標籤的話就只需要對div標籤寫一次就好  -->
+            <ol type="i"> 
+                <li>google</li> 
+                <li>ig</li>
+                <li>Youtube</li>
+                <li>Facebook</li>
+            </ol>
+    
+            <table width="300" height="100"> <!--  table標籤就是表格  -->
+                <tr> <!--  tr標籤表示行  -->
+                    <td>日期</td>  <!--  行裡面的內容就寫在td標籤裡面  -->
+                    <td>英文</td>
+                    <td>國文</td>
+                </tr>
+                <tr>
+                    <td>5/14</td>
+                    <td>13:00</td>
+                    <td>15:00</td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <hr/>
+
+        <a href="+">連結1</a>  <!--  標籤有分為寬多少就佔一行的多少和不管寬多少就是佔一整行(a標籤只佔寬)  -->
+        <a href="+">連結2</a>
+        <p>你好</p> <!--  標籤有分為寬多少就佔一行的多少和不管寬多少就是佔一整行(p標籤就是佔一整行)  -->
+        <p>哈哈</p>
+        <br/>
+        <hr/>
+
+        <div style="color: orange">div1</div>  <!--  div佔據一整行  -->
+        <div style="color: blue;"> div2</div>
+        <hr/>
+        <span style="color: orange;">span1</span>  <!--  span只佔據寬度  -->
+        <span style="color: blue;">span2</span>
+        <br/>
+
+        <!--  html輸入標籤  -->
+        帳號:<input type="text" placeholder="請輸入帳號"/>  <!--  input標籤不需要關閉所以可以直接/，type="text"等於是type是文字輸入盒  -->
+        <br/>
+        密碼:<input type="password" placeholder="請輸入密碼"/>  <!--  type="password"他就會幫你隱藏輸入的字 placeholder是輸入盒的提示訊息  -->
+        <br/>
+        <br/>
+        <input type="date" />  <!--  type="data"會出現日曆  -->
+        <br/>
+        <br/>
+        <input type="range" />  <!--  type="range"會出現拖拉條  -->
+        <br/>
+        <br/>
+        <input type="file" />  <!--  type="file"會出現上傳檔案  -->
+        <br/>
+        <br/>
+        <input type="checkbox" />  <!--  type="checkbox"勾選欄  -->
+        <br/>
+        <br/>
+        <textarea>哈囉</textarea>  <!--  如果要輸入很多字可以用textarea，中間寫的字會變成預設的字  -->
+    </body>
+</html>
