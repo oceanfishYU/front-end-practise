@@ -1,0 +1,135 @@
+<!-- 表單 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>問卷調查</title>
+  </head>
+  <body>
+    <!-- form action=""，action代表要把表單內容傳到哪裡(後端)，因為現在沒有所以不填  -->
+    <!-- method是告訴瀏覽器怎麼將標單傳到後端，沒寫的話預設是GET，GET的話form data會被附加到傳送位置的URL內，所以通常是向伺服器傳送公開的訊息才會用GET -->
+    <!-- method="POST"，POST則會把form data隱藏起來，所以通常是向伺服器傳送較私密的內容會用POST -->
+    <form action="" method="GET">
+      <label for="帳號">帳號:</label>
+      <!-- 使用lable for='要對上的表單id'，當你點擊他的content(帳號:)時就會聚焦表單 -->
+      <input
+        id="帳號"
+        type="text"
+        placeholder="請輸入帳號"
+        name="account"
+        minlength="5"
+        maxlength="10"
+      />
+      <!--  input標籤不需要關閉所以可以直接/，type="text"等於是type是文字輸入盒，minlength為最小長度，maxlength為最大長度  -->
+      <br />
+
+      <label for="密碼">密碼:</label>
+      <input
+        id="密碼"
+        type="password"
+        placeholder="請輸入密碼"
+        name="password"
+        minlength="8"
+        maxlength="15"
+      />
+      <!--  type="password"他就會幫你隱藏輸入的字 placeholder是輸入盒的提示訊息  -->
+
+      <label for="電子報">是否要訂閱電子報</label>
+      <input type="checkbox" id="電子報" name="電子報" value="訂閱" checked />
+      <!--  type="checkbox"勾選欄，因為chneckbox的value預設是on(text or password value = input)所以要改，checked是預設以勾選  -->
+      <br />
+      <br />
+
+      <label for="信箱">e-mail:</label>
+      <input type="email" id="信箱" name="信箱" required />
+      <!-- type="email"電子信箱，輸入格式為xxx@xxx，如果格式不對網頁會提示請輸入正確的格式。required是如果你沒填寫這個表單瀏覽器就不會同意傳送所有表單 -->
+      <br />
+      <br />
+
+      <label for="年齡">請輸入年齡:</label>
+      <input
+        type="number"
+        id="年齡"
+        name="age"
+        value="18"
+        min="0"
+        max="130"
+        step="0.2"
+      />
+      <!--  type="number"會出現只能輸入數字的表單，value=18表示會在進入瀏覽器時就預設標單內容為18，min為最小值=0，max為最大值=130  -->
+      <!-- step=0.2等於每次按往上會往下就會跳動0.2，如果沒有設定就是1，並且不能輸入小數 -->
+      <br />
+      <br />
+
+      <!-- 如果我在這加上checked那就會預設選男性 -->
+      <input type="radio" name="gender" id="male" value="male" required />
+      <label for="male">男性</label>
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">女性</label>
+      <input type="radio" name="gender" id="other" value="other" />
+      <label for="other">其他</label>
+      <br />
+      <br />
+      <!-- radio是單選鈕這邊是三選一，HTML是透過相同的name(只有有設定name才會被傳到後端)來判斷哪幾個radio是不能複選的。其中一個radio加上required代表你一定要三選一才能送出表單 -->
+
+      <label for="school_grade">年級:</label>
+      <select name="grade" id="school_grade" required>
+        <option value=""></option>
+        <!-- 這樣預設的下拉式選單沒有值 -->
+        <option value="1">一年級</option>
+        <option value="2">二年級</option>
+        <option value="3">三年級</option>
+      </select>
+      <label for="school_grade"></label>
+      <!-- select是下拉式選單，功能跟radio類似，option裡面的value就是我們要送到後端的值，required是說我們一定要選一個年級，因為預設為空白 -->
+      <br />
+      <br />
+
+      <label for="area">地區:</label>
+      <!-- 設定list="area_list"後我們只要輸入台就會跳出有台的選項 -->
+      <input list="area_list" type="text" name="area" id="area" />
+      <datalist id="area_list">
+        <option value="台北市">台北市</option>
+        <option value="台南市">台南市</option>
+        <option value="台中市">台中市</option>
+        <option value="高雄市">高雄市</option>
+      </datalist>
+      <!-- datalist裡面有選項，我們希望寫input area的人有選項可以填，那我們就可以在datalist設一個id -->
+      <br />
+      <br />
+
+      <label for="身高">身高為:</label>
+      0<input type="range" name="身高" min="0" max="150" step="25" />400
+      <!--  type="range"會出現拖拉條，每次拖動都調整25  -->
+      <br />
+      <br />
+
+      <input type="date" name="date" />
+      <!--  type="data"會出現日曆  -->
+      <br />
+      <br />
+
+      <label for="suggestion">給網站的建議:</label>
+      <textarea name="suggest" id="suggetion" cols="30" rows="10">
+建議:</textarea
+      >
+      <!--  如果要輸入很多字可以用textarea，中間寫(content)的字會變成預設的字。cols=columns=直排=越多越寬，rows=橫排=越多越高 -->
+      <br />
+      <br />
+
+      <input type="file" />
+      <!--  type="file"會出現上傳檔案  -->
+      <br />
+      <br />
+
+      <button type="submit">提交表單</button>
+      <!-- button是按鈕，type="submit"為提交表單等於說按下這個按鈕就會把form中有設定name的表單內容傳到後端(action設定的地方) -->
+      <!-- 如果沒寫type="submit"那<form>裡面就會預設為submit，form外面就預設為button -->
+      <button type="reset">清空</button>
+      <!-- reset是按下後會清空表單所有內容除了有預設的 -->
+      <br />
+    </form>
+  </body>
+</html>
