@@ -1,0 +1,40 @@
+/* body {
+  font-size: 50px;
+}
+
+em:是繼承父節點單位來做計算
+h1 {
+  font-size: 2em;   h1標籤的文字大小會等於boby的文字大小:50px * 2 = 100px
+}
+
+p {
+  width: 200%;
+} */
+
+/* 
+rem:是利用瀏覽器預設單位來做計算
+p {
+  font-size: 2rem;
+} 
+*/
+
+/* 
+vw&vh是相對視窗的單位:這兩個設定有個非常實用的地方就是在不管手機還是電腦瀏覽器他的長寬都是相對瀏覽器縮放來做調整的
+h1 {
+  background-color: brown;
+  width: 50vw; / 1vw= 1/100視窗寬度，如果設定為100vw會略寬於視窗寬度，因為有加上右方滾輪
+  height: 50vw;
+}
+ */
+
+.box {
+  width: 500px;
+  height: 300px;
+  background-color: darkorchid;
+}
+
+.box-1 {
+  width: 50%; /* 500*0.5=250px */
+  height: 50%; /* 300*0.5=150px */
+  background-color: rgb(250, 250, 85);
+}

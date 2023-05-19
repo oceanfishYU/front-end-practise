@@ -1,0 +1,35 @@
+/* text-align content水平對齊 */
+/* text-align只對blcok和table cell有用，對inline沒有用(例如a標籤) */
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: left; /* 預設就是靠左 */
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+/* text-decoration */
+/* 設置文本上裝飾線的外觀 */
+a {
+  text-decoration: none; /* 原本瀏覽器預設有底線，這邊把它設置成none */
+}
+
+/* line-height設置文字行距 */
+/* letter-spacing設置文自水平間距(字與字間距) */
+p {
+  line-height: 50px;
+  letter-spacing: 2px;
+}

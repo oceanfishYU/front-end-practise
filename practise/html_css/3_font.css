@@ -1,0 +1,23 @@
+/* font-family */
+/* 為選取元素指定一個或多個字體系列的優先列表 */
+h1 {
+  /* 設定p標籤指定用Times New Roman，沒有的話就用預設 */
+  font-family: "Times New Roman";
+
+  /* 設定p標籤的第一優先字體為Courier New，如果沒有這個字體的話就用Courier，又沒有的話用monospace，如果都沒有的話就用預設字體 */
+  font-family: "Courier New", Courier, monospace;
+}
+/* 可以到Google fonts裡找 */
+p {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* text-indent該斷落的內縮長度 */
+p {
+  text-indent: 2rem; /* 預設為16px所以2rem=32px */
+}
+
+/* font-weight是設定文字粗度 */
+h1 {
+  font-weight: normal; /* h1標籤預設是粗體的，這邊把它改成一般 */
+}

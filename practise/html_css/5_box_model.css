@@ -1,0 +1,45 @@
+/* Box Model */
+/* 每個Block Element都被視為一個Box。 Box裡面由內到外包含1.Content 2.Padding 3.Border 4.Margin 四個部分 */
+/* Block Element的預設width(寬度)就是瀏覽器視窗寬度(100%)，所以沒有設定的畫就會隨著我們的縮放調整 */
+
+h1 {
+  /* width & height決定了content的寬高， */
+  /* width跟content裡的內容無關 */
+  /* block element的高度會取決於content的內容，例:字體變大高度就會變高or內容變多換行高度也會變高。 */
+  width: 500px;
+  /* height: 600px; */
+  background-color: lightblue;
+
+  /* border就是包住content和padding的外框 */
+  /* border也可以設定上下左右 */
+  border: 6px solid gray; /* border為粗度6px，樣式為solid(實心)，顏色為gray的外框 */
+  border-radius: 30px; /* radius是半徑的意思，所以border-radius就是設定外框弧度 */
+
+  /* padding就是border到content之間的空間 */
+  /* 如果padding只設定一個值: padding:50px 那就是讓content到border之間的上下左右都出現50px的距離(空間) */
+  /* 如果padding設定一兩值: padding:30px 10px 那就是讓content到border之間的上下:30px 左右:10px 的距離(空間) */
+  /* padding: 50px 25px 10px 30px;就是在content到border之間出現上:50px 右:25px 下:10px 左:30px 的距離(空間) */
+  padding: 50px 25px 10px 30px;
+
+  /* margin就是border以外的距離 */
+  /* h1標籤的margin預設值是上下左右0.67rem = 16(根據瀏覽器預設px)*0.67 = 21.44 */
+  /* margin的設定是跟padding一模一樣的，有top,bottom,left,right */
+  margin: 0rem 3rem; /* 把margin改成上下:0rem=16*0=0px 左右:3rem=16*3=48px */
+}
+
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: chocolate;
+  /* border-radius: 50%;會出現一個圓型，因為他就是把寬和高的50%拿來當半徑 */
+  border-radius: 50%;
+}
+
+/* 這個class叫box-model-1的Block會超過瀏覽器的寬度(1200+80+80=1360px)，造成瀏覽器下方出現水平的移動軸(不希望出現) */
+.box-model-1 {
+  margin: 0rem 5rem; /* margin上面16*0=0px左右16*5=80px */
+  width: 1200px; /* content寬度1200px */
+  height: 50px; /* content高度50px */
+  background-color: indianred;
+  border: 2rem solid rgb(50, 49, 49);
+}

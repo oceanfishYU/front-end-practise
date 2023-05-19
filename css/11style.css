@@ -1,0 +1,164 @@
+/* flex預設方式是橫的，由左到右 */
+.container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.container div{
+    border: 1px solid blue;
+    padding:10px;
+    width:100px;
+}
+
+/* 內部flex設定為1的話他們就會是滿版的，並且隨網頁寬度拉寬，1的意思是他拿1份(都為1等於平分) */
+.box-1{
+    flex:1;
+}
+
+.box-2{
+    flex:1;
+}
+
+.box-3{
+    flex:1;
+}
+
+/* 變成box-4拿2份，box-5拿1份，box-6拿3份 */
+/* order會按照數字大小由左至右排列(可為負數) */
+.box-4{
+    flex:2;
+    order:0; /* 中間 */
+}
+
+.box-5{
+    flex:1;
+    order:-1; /* 最小 */
+}
+
+.box-6{
+    flex:3;
+    order:1; /* 最大 */
+}
+
+
+/* flex-wrap:wrap可以使超過網頁寬度的區塊移到下面，而不是一直縮小 */
+
+.container000{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+.container000 div{
+    border: 1px solid red;
+    padding:10px;
+    width:100px;
+}
+
+.box-7{
+
+}
+
+.box-8{
+
+}
+
+.box-9{
+
+}
+
+/* flex-direction: column就是把主軸改成由上而下，flex、order、justify-content和align-items也會跟著主軸改變 */
+.container111{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* column-reverse是由下而上 */
+    height: 300px; /* 高度不夠就會換行 */
+    border:1px solid orange
+}
+
+
+.container111 div{
+    border: 1px solid green;
+    padding:10px;
+    width:100px;
+}
+
+.box-a{
+
+}
+
+.box-b{
+
+}
+
+.box-c{
+
+}
+
+.containerdef{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* row是預設 */
+    height: 300px; 
+    border:1px solid orange;
+    justify-content:center; /* 把區塊放到主軸的中間 */
+    align-items: center; /* 把區塊放到次軸的中間 */
+    /* justify-content:between =>把區塊d、f分別擺到主軸的開始和尾端，區塊e放在中間 */
+    /* justify-content:space-around =>把區塊預設擺放後剩餘的空間平均分配到區塊的左右 */
+    /* justify-content:flex-end =>把區塊放到主軸的尾端(右上角) */
+    /* justify-content:start =>把區塊放到主軸的開始(左上角=預設) */
+
+}
+
+
+.containerdef div{
+    border: 1px solid gray;
+    padding:10px;
+    width:100px;
+    height:20px;
+}
+
+.box-d{
+
+}
+
+.box-e{
+
+}
+
+.box-f{
+
+}
+
+
+/* 如果主軸不夠如何四軸置中 */
+.container222{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* row是預設 */
+    height: 300px; /* 高度不夠就會換行 */
+    border:1px solid rgb(137, 46, 207);
+    justify-content:center; /* 把區塊放到主軸的中間 */
+    align-content: center; /* 如果主軸空間不夠換行了的話，align-items: center就無法想之前那樣置中，要改成用align-content: center才能做到四軸置中 */
+
+}
+
+
+.container222 div{
+    border: 1px solid rgb(199, 211, 24);
+    padding:10px;
+    width:100px;
+    height:20px;
+}
+
+.box-d{
+
+}
+
+.box-e{
+
+}
+
+.box-f{
+
+}
