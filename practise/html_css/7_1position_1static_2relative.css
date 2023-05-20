@@ -1,0 +1,42 @@
+/* Position */
+/* 用來設定Element在文檔中的定位方式 */
+
+/* 1.static(靜態) */
+/* HTML元素預設都是Static的，所以不用考慮z-index(重疊時誰會覆蓋誰)，除了static外其他都是position屬性所以有z-index */
+.container {
+  width: 500px;
+  height: 2000px;
+  background-color: black;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: burlywood;
+}
+
+.box2 {
+  background-color: rgb(135, 196, 222);
+}
+
+.box3 {
+  background-color: rgb(164, 135, 222);
+}
+
+/* 2.relative(相對) */
+/* relative就是相對元素的normal position(原本位置)進行偏移，有設定的話就是position element了 */
+.box2 {
+  position: relative;
+  top: 100px; /* 相對原本上方的位置偏移100px(移動到距離原上方100px的位置) */
+  left: 50px; /* 相對原本左方的位置偏移50px(移動到距離原左方50px的位置) */
+  z-index: 10; /* 因為box-2的z-index=10 > box-3的z-index=5 所以box-2能疊在box-1上方(本來是相反) */
+}
+
+.box3 {
+  position: relative;
+  bottom: 50px; /* 相對原本下方的位置偏移50px(移動到距離原下方50px的位置) */
+  z-index: 5;
+}

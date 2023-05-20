@@ -1,0 +1,29 @@
+/* Display */
+
+/* my-class1是一個a標籤，「display: inline」屬性會導致width和height無法發揮作用。 */
+/* !! inline是可以設定padding和margin的，但是!上下的padding和margin即使碰到其他Element也不會把他們推開，會直接重疊。但是左右可以推開 */
+.my-class-1 {
+  width: 500px;
+  height: 600px;
+  background-color: tomato;
+  padding: 20px;
+  margin: 50px;
+}
+
+/* my-class2是一個a標籤，他原本的display屬性為Inline Element(寬度視content決定) */
+.my-class-2 {
+  display: block; /* 這邊把my-class這個a標籤的Display屬性從Inline改成Block(Block Element的寬度預設為100%。並且出現就會換行) */
+  width: 150px; /* 把Display屬性改成Block後，width和height就可以使用了 */
+  height: 30px;
+  background-color: slateblue;
+  color: white;
+  overflow: hidden;
+}
+
+/* inline block */
+/* 只有1.button 2.input 3.textarea 4.img 5.select */
+/* inline block與block最大的不同就是他出現的時候不會換行 */
+#text-1 {
+  width: 250px;
+  height: 20px;
+}

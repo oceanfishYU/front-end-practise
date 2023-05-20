@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>故宮資訊網</title>
+    <base target="_blank" />
+    <!-- link就是從外部引入檔案的意思，rel="stylesheet"意思是現在引入的是一個css檔案 -->
+    <link rel="icon" href="./favicon.ico" />
+    <!-- 12~17是從google font引入字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./11_transition.css" />
+  </head>
+  <body>
+    <h1>國立故宮博物院</h1>
+
+    <p>
+      國立故宮博物院，簡稱
+      <strong>臺灣故宮</strong>
+      或臺北故宮（博物院），別名中山博物院，為臺灣最具規模的博物館以及臺灣八景之一，也是古代中國藝術史與漢學研究機構。館舍位於臺北市士林區，一年可接待超過614萬人次的參訪旅客，曾位列2015年全球參觀人數第六多的藝術博物館。
+      國立故宮博物院是隸屬於中華民國行政院的中央二級機關，故宮院長為特任官，視同部會首長。它的前身是成立於京兆地方（今北京）紫禁城外廷的古物陳列所，1925年10月10日在紫禁城內廷另外組織了故宮博物院，後來因為抗日戰爭爆發輾轉遷移至南京市和四川省等地，古物陳列所於第二次世界大戰後裁撤併入國立中央博物院籌備處。隨後第二次國共內戰衝突導致時局再陷動盪，包括國立北平故宮博物院在內的6個機構於是在1948年11月10日決定遷往臺灣，幾經改組易名，最終由國立北平故宮博物院和國立中央博物院籌備處合併為國立故宮博物院，1965年11月12日在臺北現址復院開幕。此後，博物館致力打造成為文化創意產業加值應用的虛擬博物館，館舍也歷經多次整修擴建。
+    </p>
+
+    <div>
+      <!-- absolute linking -->
+      <a href="https://www.npm.gov.tw/" class="my-class-1">故宮網站連結</a>
+      <a
+        href="https://www.amazon.com/?tag=admarketus-20&ref=pd_sl_bde99bd9d992488d703516583894d1cd12a3abba4ff0b195658dd0ce&mfadid=adm"
+        class="my-class-2"
+        >亞馬遜購物網</a
+      >
+      <!-- relative linking -->
+      <a href="./第二個頁面.html" class="my-class-3">第二個頁面</a>
+    </div>
+
+    <img
+      width="600"
+      height="300"
+      src="./images/故宮圖片2.jpeg"
+      alt="故宮圖片"
+    />
+    <img
+      width="400"
+      height="300"
+      src="./images/故宮圖片1.jpeg"
+      alt="故宮圖片"
+    />
+
+    <h2>故宮院區</h2>
+    <ul>
+      <li>北部院區</li>
+      <li>南部院區</li>
+    </ul>
+
+    <h2>故宮三寶</h2>
+    <ol>
+      <li>范寬〈谿山行旅圖〉</li>
+      <li>郭熙〈早春圖〉</li>
+      <li>李唐〈萬壑松風圖〉</li>
+    </ol>
+
+    <!-- 雖然我引入css的檔案有設定h2文字顏色，但由於inline的優先層級最高所以會覆蓋掉external的設定 -->
+    <h2 style="color: indianred">基礎資訊</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">國立故宮博物院資訊</th>
+        </tr>
+        <tr>
+          <th>所屬部門</th>
+          <th>員額</th>
+          <th>授權法源</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>行政院</td>
+          <td>502人</td>
+          <td>《行政院組織法》、《國立故宮博物院組織法》</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="box">
+      <div class="box-1"></div>
+    </div>
+    <br />
+    <div class="box-model-1"></div>
+    <input type="text" id="text-1" />
+    <input type="text" id="text-2" />
+  </body>
+</html>

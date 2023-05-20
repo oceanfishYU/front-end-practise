@@ -1,0 +1,23 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* background */
+
+/* background-image-size的問題可以參考https://developer.mozilla.org/en-US/docs/Web/CSS/background-size  */
+/* 
+body {
+  background-image: url(./images/故宮圖片2.jpeg);  --->body元素的背景圖片變成故宮圖片2，會出現圖片尺寸跟瀏覽器不符的問題
+  background-size: contain;  --->contain會在容器內盡可能大地等比例縮放圖片，而布剪裁或拉伸，如果容器大於圖片則會重複平鋪
+  background-repeat: no-repeat;  --->這邊的程式碼使第8行的contain不會重複 
+}
+ */
+
+body {
+  /* 在unsplash找的圖片 */
+  background-image: url(./images/joel-severino-y2SM7QX_w7k-unsplash.jpg);
+  /* 設定為cover圖片會保持同比例縮放到盡可能小的尺寸以填充容器(高寬完全覆蓋)，如果比例與元素不同的話，則圖片會被垂直或水平裁剪 */
+  background-size: cover;
+  /* background-position可以設定圖片初始位置，bottom就是下面 */
+  background-position: bottom;
+}

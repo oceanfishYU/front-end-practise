@@ -1,0 +1,51 @@
+/* Animation(動畫) */
+
+div.container {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: yellowgreen;
+  position: relative;
+
+  /* 讓box套用名為change_color的動畫 */
+  animation-name: change_color;
+
+  /* 整個動畫過程為1秒 */
+  animation-duration: 1s;
+
+  /* 2秒後才開始動畫 */
+  animation-delay: 2s;
+
+  /* 動畫結束後element的mode停留在forword(結束)的樣子 */
+  animation-fill-mode: forwards;
+
+  /* 動畫重複infinite次(無限次) */
+  animation-iteration-count: infinite;
+
+  /* 動畫先正放再倒放 */
+  animation-direction: alternate;
+
+  /* 以上animation設定可以全部像34行，用animation一次設定 */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+/* 設定一個名為change_color的動畫 */
+@keyframes change_color {
+  from {
+    /* 背景顏色從yellowgreen變成steelblue */
+    background-color: yellowgreen;
+    /* 如果這裡沒設定top&left那動畫會變成瞬間移動成to的樣子 */
+    top: 0px;
+    left: 0px;
+  }
+  to {
+    background-color: steelblue;
+    top: 300px;
+    left: 300px;
+  }
+}

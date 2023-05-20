@@ -1,0 +1,52 @@
+/* Stacking Context(堆疊環境) */
+/* Stacking Context是HTML元素沿著虛擬z軸相對用戶的3D概念化，如果用戶面向的網頁是xy平面 */
+/* 那HTML元素會根據元素的屬性案優先順序佔據該空間 */
+/* Stacking Context會形成的情況包含(但不只)1.Root element of document(<html>, 
+2.任何有設定position為absolute或relative且z-index不是auto的element)
+3.任何有設定position為fixed或sticky的element */
+
+.container {
+  width: 500px;
+  height: 2000px;
+  background-color: black;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.small-box {
+  width: 100px;
+  height: 100px;
+}
+
+.box1 {
+  background-color: burlywood;
+}
+
+.box2 {
+  background-color: rgb(135, 196, 222);
+  position: relative;
+  z-index: 0; /* 這邊由於box2被設定為relative且z-index為0，所以它的內部自己形成一個stacking context */
+}
+
+.box3 {
+  background-color: rgb(164, 135, 222);
+}
+
+.box4 {
+  background-color: yellowgreen;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: -1; /* box4的z-index為-1但不會被box2蓋過 */
+}
+
+.box5 {
+  background-color: rgb(243, 101, 98);
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  z-index: -5; /* box5的z-index為-5，它會被box4蓋過 */
+}

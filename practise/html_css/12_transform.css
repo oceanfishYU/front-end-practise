@@ -1,0 +1,45 @@
+/* Transform(轉換) */
+
+/* 1.translate */
+/* translate會相對原本位子移動到 */
+div.container {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  position: relative; /* 這邊設定為relative是因為要把container變成position element這樣下面的box為absolute才能參考container */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: yellowgreen;
+  transition: all 1s;
+  /* 18~20行使box會移動到container(父節點)的中間 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 如果沒設定22行的話box會變成只有左上角對齊container的正中間，所以設定box相對自己個移動50%，這樣box的中心就會剛好在正中間了 */
+  transform: translate(-50%, -50%);
+}
+
+/* transform: translate(30px, 50px);當游標移動到box時，box移動到距離原本位子上方30px，左方50px的位子，並且過程是2s */
+/* 
+.box:hover {
+  transform: translate(30px, 50px);
+} 
+*/
+
+/* 2.rotate(旋轉) */
+/* transform: rotate(180deg);當當游標移動到box時box沿著X軸旋轉180度，並且過程是2s */
+.box:hover {
+  transform: rotateX(180deg); /*rotate沒設定X或Y的話預設是沿著Z軸*/
+}
+
+/* 3.scale(縮放) */
+/* transform: scale(1.5);當當游標移動到box時box放大1.5倍，並且過程是2s */
+/*
+.box:hover {
+  transform: scale(1.5);
+  transform: scale(2,6); 寬放大2倍，高放大6倍
+}
+*/

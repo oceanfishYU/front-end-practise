@@ -1,0 +1,28 @@
+/* 5.sticky(黏) */
+/* sticky是relative和fixed的混和體 */
+/* position被設定為sticky的element會被視為相對定位，直到超過指定的threshold(臨界點)時會被視為固定定位 */
+
+.container {
+  width: 500px;
+  height: 2000px;
+  background-color: black;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: burlywood;
+}
+
+.box2 {
+  background-color: rgb(135, 196, 222);
+  position: sticky; /* box2一開始會跟normal flow一樣 */
+  top: 10px; /* 這裡設定了距離上方10px的意思是，當我們移動滾輪使box2與瀏覽器上方的距離小於10px時，他就會被固定在距離瀏覽器上方的10px的位子 */
+}
+
+.box3 {
+  background-color: rgb(164, 135, 222);
+}

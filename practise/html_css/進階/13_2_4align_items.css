@@ -1,0 +1,38 @@
+/* Properties for the Parent(flex container)*/
+
+/* 4.align-items */
+/* align-items定義flex item如何沿著flex container的次軸對齊 */
+div.container {
+  border: 3px solid black;
+  height: 1300px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: start;
+}
+
+.box {
+  width: 200px; /* 如果沒有設定flex item的寬度的話它就會預設跟content內容多寡來決定寬度 */
+
+  /* height: 200px;  如果沒有設定flex item的高度和flex-direction: column的話
+                    ，那它的高度就會預設與flex container一樣(align item:stretch) */
+}
+
+.box1 {
+  background-color: burlywood;
+}
+
+.box2 {
+  background-color: lightcoral;
+}
+
+.box3 {
+  background-color: rgb(154, 14, 42);
+}
+
+.box4 {
+  background-color: rgb(102, 135, 36);
+}
+
+.box5 {
+  background-color: lightslategray;
+}

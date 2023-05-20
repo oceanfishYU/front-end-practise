@@ -1,0 +1,36 @@
+/* Properties for the  Children(flex items) =>可以在flex item設定的屬性 */
+
+/* align-self */
+/* 指定單個flex item的對齊方式 */
+div.container {
+  border: 3px solid black;
+  height: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start; /* 預設 */
+}
+
+.box {
+  flex: 1 1 100px;
+}
+
+.box1 {
+  background-color: burlywood;
+  align-self: center; /* 使box1變成對齊center */
+}
+
+.box2 {
+  background-color: lightcoral;
+}
+
+.box3 {
+  background-color: rgb(154, 14, 42);
+}
+
+.box4 {
+  background-color: rgb(102, 135, 36);
+}
+
+.box5 {
+  background-color: lightslategray;
+}

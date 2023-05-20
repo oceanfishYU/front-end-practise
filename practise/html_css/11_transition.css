@@ -1,0 +1,22 @@
+/* Transition(過渡) */
+
+/* 當h1要變成CSS設定的樣式時(游標移動到h1)，所有動作(all)過程都要2s，然後時間函數是ease-in-out，並且鼠標離開，樣式變回預設時過程也要這些時間 */
+h1 {
+  transition: all 2s ease-in-out;
+}
+
+/* 當p要變成CSS設定的樣式時(游標移動到p)，background-color改變過程要3s，color改變過程要1s，並且鼠標離開，樣式變回預設時過程也要這些時間 */
+p {
+  transition: background-color 3s, color 1s;
+}
+
+/* 如果把transition設定在以下裡面的話，鼠標離開時就不會有過渡時間了，因為離開時就直接跳出程式了 */
+h1:hover {
+  background-color: yellowgreen;
+  color: slategray;
+}
+
+p:hover {
+  background-color: rgb(50, 120, 205);
+  color: white;
+}

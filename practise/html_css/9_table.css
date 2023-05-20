@@ -1,0 +1,27 @@
+/* border-collapse(坍塌) */
+/* 用來設定表格是否具有單獨或共享的邊框 */
+
+table,
+tr,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse; /* 邊框會合併，沒有設定就是獨立 */
+  border-bottom: 3px solid rgb(178, 1, 1); /* 表格每個row都會出現粗度為1px實心的紅線 */
+}
+
+tr:hover {
+  background-color: thistle; /* hover就是當鼠標移動到這 */
+}
+
+td,
+th {
+  padding: 20px;
+}
+
+/* Responsive Table(響應式表格) */
+/* 因為表格太大所以當瀏覽器頁面不夠時就會出現表格內容無法完整顯示的問題 */
+/* 此時設定overflow-x: auto;的話當頁面不夠時表格區域就會出現水平移動軸，且不會影響表格外 */
+div {
+  overflow-x: auto;
+}

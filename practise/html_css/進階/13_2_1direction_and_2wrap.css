@@ -1,0 +1,45 @@
+/* Properties for the Parent(flex container)*/
+
+/* 1.flex-direction : 設定flex container的排序方式  */
+/* 2.flex-wrap : 設定flex item是強制要在同一行內，還是超過的可以換行
+     如果沒有設定的話預設是 no wrap，意思是flex item即使有設定寬高，但雖著網頁縮小，flex item的寬高還是會被壓縮以達到在同一行的樣子
+*/
+div.container {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row; /* 由左而右橫向排列(預設) */
+  /* flex-direction: row-reverse;    --->由右而左橫向反向排列  */
+  /* flex-direction: column;   --->變成由上而下直向排列  */
+  /* flex-direction:column-reverse;    --->變成由下而上直向反向排列  */
+
+  flex-wrap: wrap; /* flex-wrap: wrap會讓超過網頁的flex item換行 */
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+}
+
+.box1 {
+  background-color: burlywood;
+}
+
+.box2 {
+  background-color: lightcoral;
+}
+
+.box3 {
+  background-color: rgb(154, 14, 42);
+}
+
+.box4 {
+  background-color: rgb(102, 135, 36);
+}
+
+.box5 {
+  background-color: lightslategray;
+}
+
+div.container2 {
+  display: flex;
+}

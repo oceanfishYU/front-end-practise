@@ -1,0 +1,57 @@
+/* Flex */
+
+/* class為container的element變成Flex Container */
+div.container {
+  border: 3px solid black;
+  display: flex;
+}
+
+/* 在Flex container裡面的元素叫做flex item */
+/* Flex Container底下的flex item預設的排序方式是橫的 */
+/* flex item可以在設定display:flex變成Flex Container */
+.box {
+  width: 250px;
+  height: 250px;
+}
+
+/* 此時box是flex item也是flex container */
+.box1 {
+  background-color: burlywood;
+  display: flex;
+}
+
+.small-box {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+}
+
+.box2 {
+  background-color: lightcoral;
+}
+
+.box3 {
+  background-color: rgb(154, 14, 42);
+}
+
+.box4 {
+  background-color: rgb(102, 135, 36);
+}
+
+.box5 {
+  background-color: lightslategray;
+}
+
+div.container2 {
+  display: flex;
+}
+
+/* 原本a標籤的outer type是inline(不能設定width,height)，但是因為他們現在是在flex container底下
+   outer type已經變成flex item了，所以現在可以設定width和height了
+*/
+.container2 a {
+  background-color: gold;
+  width: 100px;
+  height: 50px;
+  border: 1px solid gray;
+}

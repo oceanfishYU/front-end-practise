@@ -1,0 +1,40 @@
+/* Position */
+/* 用來設定Element在文檔中的定位方式 */
+
+/* 3.absolute(絕對) */
+/* 該元素會被從normal flow中移除，不會保留空間(例:box2變成absolute，那box3就會往上移接著box原本的位置) */
+/* 定位參考是參考closest positioned ancestor(是position element的最近父節點) */
+.container {
+  width: 500px;
+  height: 2000px;
+  background-color: black;
+  position: relative; /* 此時container被設定成position element了，而下面的box2就會參考container的位置坐定位 */
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: burlywood;
+}
+
+/* 此時如果container(box2的往上一個父節點(closest positioned ancestor))沒有設定成position element，
+那他就會一直往上找body,html，如果都沒設定為position element，那他就會參考瀏覽器的初始視窗 */
+.box2 {
+  background-color: rgb(135, 196, 222);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 4.fixed(固定) */
+/* 該元素會被從normal flow中移除，不會保留空間 */
+/* fiexd跟absolute很像，只是fixed一開始就是參考initial containing block(就是瀏覽器的初始視窗)，不管滾輪怎麼移動他就是在固定的位子 */
+.box3 {
+  background-color: rgb(164, 135, 222);
+  position: fixed;
+  top: 100px; /* 距離瀏覽器上方100px的位置 */
+  right: 100px; /* 距離瀏覽器右方100px的位置 */
+}

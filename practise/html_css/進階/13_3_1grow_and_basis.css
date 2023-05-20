@@ -1,0 +1,46 @@
+/* Properties for the  Children(flex items) =>可以在flex item設定的屬性 */
+
+/* 1.flex-grow */
+/* flex-grow是設定如何將flex container剩餘的空間分配給flex item(寬度變大) */
+div.container {
+  border: 3px solid black;
+  height: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* flex-basis */
+/* 我們通常不會把flex item直接設定width和height而是用flex-basis */
+.box {
+  /* 如果flex-direction:column的話那basis設定的就是高度，grow也是高度，然後寬度會變成100%(預設) */
+
+  flex-basis: 200px; /* box的最基本寬度要有200px，因為有設定wrap所以如果超過的話會換行而不會縮小，而高度就是預設100% */
+}
+
+/* 此時box有5個=>1300-(200*5)=300，也就是說還有300px的寬度是空出來的，這時我們在每個box都設定flex-grow: 1
+     那5個box就會每個box分到300分成5份的等比例的空間，此時5個box的寬度就會等比例放大以填滿300px的空間
+  */
+.box1 {
+  background-color: burlywood;
+  flex-grow: 1; /* 如果改成3的話那box1就會分到300px中3份的空間(可以設定0~無限) */
+}
+
+.box2 {
+  background-color: lightcoral;
+  flex-grow: 1;
+}
+
+.box3 {
+  background-color: rgb(154, 14, 42);
+  flex-grow: 1;
+}
+
+.box4 {
+  background-color: rgb(102, 135, 36);
+  flex-grow: 1;
+}
+
+.box5 {
+  background-color: lightslategray;
+  flex-grow: 1;
+}

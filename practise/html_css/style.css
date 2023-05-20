@@ -1,0 +1,19 @@
+/* 通常css檔案都會叫做style.css */
+h1 {
+  color: orange; /* 這是以color keyword的方式選取顏色，這些為css預定保留的關鍵字 */
+}
+h2 {
+  color: rgb(
+    100,
+    164,
+    166
+  ); /* 這是以rgb (red,green,blue)的方式選取顏色，每個顏色都有0~255(1btye=8bit=2^8=256 二進制)=256^3=16777216種顏色 */
+}
+a {
+  color: rgba(46, 139, 86, 0.53);
+  /* 這是以rgba (red,green,blue,alpha)的方式選取顏色，alpha這個channel是用來選擇透明度(0~1)*/
+}
+p {
+  color: #0f52ba;
+  /* 這是以hex(十六進制)的方式選取顏色6個十六進制=16^6=16777216種顏色*/
+}

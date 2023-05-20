@@ -1,0 +1,39 @@
+/* Properties for the Parent(flex container)*/
+
+/* 3.justify-content */
+/* justify-content定義flex item如何沿著flex container的主軸在item和周圍間分配空間 */
+div.container {
+  border: 3px solid black;
+  height: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content有1.start(預設),2.flex-end,
+     3.center,4.space-between,5.space-around,6.space-evenly可以設定 */
+  justify-content: start;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: burlywood;
+}
+
+.box2 {
+  background-color: lightcoral;
+}
+
+.box3 {
+  background-color: rgb(154, 14, 42);
+}
+
+.box4 {
+  background-color: rgb(102, 135, 36);
+}
+
+.box5 {
+  background-color: lightslategray;
+}
